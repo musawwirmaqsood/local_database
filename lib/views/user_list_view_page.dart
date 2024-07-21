@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:local_database/core/di.dart';
-import 'package:local_database/database/user_database_helper.dart';
+import 'package:local_database/database/user_database_helper_i.dart';
 import 'package:local_database/models/user.dart';
 import 'package:local_database/views/add_update_user_page.dart';
 
@@ -14,7 +14,7 @@ class UserListViewPage extends StatefulWidget {
 }
 
 class _UserListViewPageState extends State<UserListViewPage> {
-  final UserDatabaseHelper userDatabaseHelper = getIt<UserDatabaseHelper>();
+  final UserDatabaseHelperI userDatabaseHelper = getIt<UserDatabaseHelperI>();
   List<User> userList = [];
 
   void _getUserList() async {

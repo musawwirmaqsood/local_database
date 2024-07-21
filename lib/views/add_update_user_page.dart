@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:local_database/core/di.dart';
-import 'package:local_database/database/user_database_helper.dart';
+import 'package:local_database/database/user_database_helper_i.dart';
 import 'package:local_database/models/user.dart';
 
 class AddUpdateUserPage extends StatefulWidget {
@@ -12,7 +12,7 @@ class AddUpdateUserPage extends StatefulWidget {
 }
 
 class _AddUpdateUserPageState extends State<AddUpdateUserPage> {
-  final UserDatabaseHelper userDatabaseHelper = getIt<UserDatabaseHelper>();
+  final UserDatabaseHelperI userDatabaseHelper = getIt<UserDatabaseHelperI>();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController ageController = TextEditingController();
 
