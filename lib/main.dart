@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:local_database/core/di.dart';
 import 'package:local_database/views/user_list_view_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
   await setupDI();
   runApp(const MyApp());
 }

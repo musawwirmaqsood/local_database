@@ -20,3 +20,9 @@ class DatabaseQuery {
   static String fetchUserById(int id) =>
       'select * from ${UsersTable.tableName} where ${UsersTable.id} == $id';
 }
+
+class HiveConstants {
+  static const String currentId = 'currentId';
+  static const String userBox = 'userBox';
+  static const String idBox = 'idBox';
+}
